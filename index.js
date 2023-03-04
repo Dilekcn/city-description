@@ -21,7 +21,7 @@ connection.once("open", () => {
 
 const descriptionRouter = require("./routes/citydesc");
 
-app.use("/", descriptionRouter);
+app.use("/description", descriptionRouter);
 
 app.get("/", (req, res) => res.send("Description Page !"));
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

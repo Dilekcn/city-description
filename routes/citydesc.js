@@ -4,7 +4,7 @@ const Description = require("../models/description.model");
 
 router.route("/").get((req, res) => {
   Description.find()
-    .then((decs) => res.json(decs))
+    .then((data) => res.json(data[Math.floor(Math.random() * data.length)]))
     .catch((err) => res.status(400).json("Error:" + err));
 });
 
